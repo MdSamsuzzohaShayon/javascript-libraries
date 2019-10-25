@@ -35,6 +35,7 @@
 ```
 
 <h2 style="background:'black'">main.js</h2>
+
 ```
 import EditorJS from '@editorjs/editorjs'; 
 import Header from '@editorjs/header'; 
