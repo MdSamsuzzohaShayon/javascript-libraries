@@ -57,3 +57,5 @@ const editor = new EditorJS({
   }, 
 })
 ```
+
+ - To run the code `parcel index.html`
