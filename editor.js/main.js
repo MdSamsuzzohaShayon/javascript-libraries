@@ -15,6 +15,8 @@ const editor = new EditorJS({
    * Id of Element that should contain the Editor 
    */
   holderId: 'codex-editor',
+  autofocus: true,
+  placeholder: 'Let`s create a blogpost',
 
   /** 
    * Available Tools list. 
@@ -72,6 +74,7 @@ const render = new EditorJS({
     delimiter: Delimiter
   },
   data:{
+    // https://editorjs.io/
     "time" : 1572045083735,
     "blocks" : [
         {

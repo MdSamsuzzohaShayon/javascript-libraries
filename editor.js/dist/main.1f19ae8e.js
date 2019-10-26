@@ -254,6 +254,8 @@ var editor = new _editorjs.default({
    * Id of Element that should contain the Editor 
    */
   holderId: 'codex-editor',
+  autofocus: true,
+  placeholder: 'Let`s create a blogpost',
 
   /** 
    * Available Tools list. 
@@ -288,8 +290,9 @@ saveBtn.addEventListener('click', function () {
   editor.save().then(function (outputData) {
     console.log("Article data: ", outputData);
   });
-});
-var editor2 = new _editorjs.default({
+}); // RENDERING DATA TO CLIENT
+
+var render = new _editorjs.default({
   onReady: function onReady() {
     console.log('Editor.js is ready to work!');
   },
@@ -301,6 +304,7 @@ var editor2 = new _editorjs.default({
     delimiter: _delimiter.default
   },
   data: {
+    // https://editorjs.io/
     "time": 1572045083735,
     "blocks": [{
       "type": "header",
@@ -413,7 +417,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "41903" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "41009" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
