@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ColcadeJS</title>
+    <style>
+* { box-sizing: border-box; }
+
+.grid {
+  border: 1px solid;
+}
+
+.grid:after {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+.grid-col {
+  float: left;
+  width: 49%;
+  margin-right: 2%;
+  background: #DDD;
+}
+
+.grid-col--4 { margin-right: 0; }
+
+/* hide two middle */
+.grid-col--2, .grid-col--3 { display: none; }
+
+@media ( min-width: 768px ) {
+  .grid-col { width: 32%; }
+  .grid-col--2 { display: block; }
+}
+
+@media ( min-width: 1200px ) {
+  .grid-col { width: 23.5%; }
+  .grid-col--2, .grid-col--3 { display: block; }
+}
+
+.grid-item {
+  background: #333;
+  min-height: 100px;
+}
+
+.grid-item img {
+  display: block;
+  width: 100%;
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>Colcade - images</h1>
+
+<!-- Colcade HTML init -->
+<div class="grid" data-colcade="columns: .grid-col, items: .grid-item">
+  <div class="grid-col grid-col--1"></div>
+  <div class="grid-col grid-col--2"></div>
+  <div class="grid-col grid-col--3"></div>
+  <div class="grid-col grid-col--4"></div>
+
+  <div class="grid-item"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/cat-nose.jpg" /></div>
+  <div class="grid-item"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/contrail.jpg" /></div>
+  <div class="grid-item"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/golden-hour.jpg" /></div>
+  <div class="grid-item"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/flight-formation.jpg" /></div>
+  <div class="grid-item"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/grapes.jpg" /></div>
+  <div class="grid-item"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/gulls.jpg" /></div>
+  <div class="grid-item"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/leaf-droplets.jpg" /></div>
+  <div class="grid-item"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg" /></div>
+  <div class="grid-item"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg" /></div>
+  <div class="grid-item"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/raspberries.jpg" /></div>
+  <div class="grid-item"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/shore.jpg" /></div>
+  <div class="grid-item"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/submerged.jpg" /></div>
+  <div class="grid-item"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/touch-screen.jpg" /></div>
+</div>
+    </div>
+
+
+
+    <!-- <script src="js/colcade.js"></script> -->
+    <script src="https://unpkg.com/colcade@0/colcade.js"></script>
+    <script>
+        // element as first argument
+        const grid = document.querySelector('.grid');
+        // const colc = new Colcade(grid, {
+        //     columns: '.grid-col',
+        //     items: '.grid-item'
+        // });
+
+        // selector string as first argument
+        const colc = new Colcade('.grid', {
+            columns: '.grid-col',
+            items: '.grid-item'
+        });
+    </script>
+</body>
+
+</html>
