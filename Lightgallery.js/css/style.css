@@ -1,0 +1,49 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background: rgb(8, 24, 26);
+    overflow: hidden;
+}
+#lightgallery{
+    display: flex;
+    flex-basis: 20%;   
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+
+
+.images img{
+    object-fit: cover;
+    object-position: center;
+  
+    width: 350px;
+    height: 200px;
+}
+
+
+/* .lg-backdrop.in {
+    opacity: 0.85;
+}
+.fixed-size.lg-outer .lg-inner {
+  background-color: #FFF;
+}
+.fixed-size.lg-outer .lg-sub-html {
+  position: absolute;
+  text-align: left;
+}
+.fixed-size.lg-outer .lg-toolbar {
+  background-color: transparent;
+  height: 0;
+}
+.fixed-size.lg-outer .lg-toolbar .lg-icon {
+  color: #FFF;
+}
+.fixed-size.lg-outer .lg-img-wrap {
+  padding: 12px;
+} */
+
+
