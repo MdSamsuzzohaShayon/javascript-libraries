@@ -1,8 +1,7 @@
-var animation = bodymovin.loadAnimation({
-  container: document.getElementById('bm'), // Required
-  path: 'js/data.json', // Required
-  renderer: 'svg/canvas/html', // Required
-  loop: true, // Optional
-  autoplay: true, // Optional
-  name: "Hello World", // Name for future reference. Optional.
-})
+lottie.loadAnimation({
+  container: document.getElementById('bm'), // the dom element that will contain the animation
+  renderer: 'svg',
+  loop: true,
+  autoplay: true,
+  path: 'js/data.json' // the path to the animation json
+});
